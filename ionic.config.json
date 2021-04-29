@@ -1,0 +1,7 @@
+{
+  "name": "unidesarrollo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

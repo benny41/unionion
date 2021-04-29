@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      CENTRO DE NEGOCIOS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 2</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-item *ngFor="let txt of txt">
+    <ion-card class="cardnego">
+      <img src="https://unidesarrollo.com.mx/img/bcenter/{{txt.ruta}}" />
+      <ion-card-header>
+        <ion-card-subtitle>Centro de Negocios</ion-card-subtitle>
+        <ion-card-title>{{txt.categoria}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p *ngIf="txt.descrip">{{txt.descrip}}</p> 
+        <p *ngIf="txt.link"><a href="{{txt.link}}" target="_blank"> {{txt.link}}</a>
+      </ion-card-content>
+    </ion-card>
+  </ion-item>
+</ion-content>

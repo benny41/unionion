@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Estados de Cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let txt of txt" position="stacked">
+    
+    <ion-label *ngIf="txt != 'SEDC'">{{txt.mes}} {{txt.year}}</ion-label>
+    <a *ngIf="txt != 'SEDC'" href="https://unidesarrollo.com.mx/pdf/{{txt.clave}}/{{txt.archivo}}" target="_blank"><ion-button slot="end" color="danger">Ver</ion-button></a>
+    <a *ngIf="txt != 'SEDC'" href="https://unidesarrollo.com.mx/pdf/{{txt.clave}}/{{txt.archivo}}" target="_blank"><ion-button slot="end" color="danger">Descargar</ion-button></a>
+    <p *ngIf="txt == 'SEDC'" >SIN ESTADOS DE CUENTA DISPONIBLES</p>
+  
+  </ion-item>
+
+  <ion-item>
+    <ion-button (click)="openLog()" >Cerrar Sesión</ion-button>
+  </ion-item>
+</ion-list>
+</ion-content>
